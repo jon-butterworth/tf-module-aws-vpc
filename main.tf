@@ -21,7 +21,7 @@ locals {
 }
 
 module "label" {
-  source  = "git::https://github.com/socratesdao/tf-module-null-label"
+  source  = "git::https://github.com/jon-butterworth/tf-module-null-label"
 
   context = module.this.context
 }

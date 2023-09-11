@@ -66,7 +66,7 @@ data "aws_vpc_endpoint_service" "interface_endpoint_service" {
 }
 
 module "gateway_endpoint_label" {
-  source  = "git::https://github.com/socratesdao/tf-module-null-label"
+  source  = "git::https://github.com/jon-butterworth/tf-module-null-label"
 
   for_each   = local.enabled ? data.aws_vpc_endpoint_service.gateway_endpoint_service : {}
   attributes = [each.key]
@@ -75,7 +75,7 @@ module "gateway_endpoint_label" {
 }
 
 module "interface_endpoint_label" {
-  source  = "git::https://github.com/socratesdao/tf-module-null-label"
+  source  = "git::https://github.com/jon-butterworth/tf-module-null-label"
 
   for_each   = local.enabled ? data.aws_vpc_endpoint_service.interface_endpoint_service : {}
   attributes = [each.key]
